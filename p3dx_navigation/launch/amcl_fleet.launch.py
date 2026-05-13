@@ -32,13 +32,18 @@ def generate_launch_description():
                 description="Add namespace for nodes related to this robot",
             ),
             DeclareLaunchArgument(
+                "use_sim_time",
+                default_value="false",
+                description="Use simulation (Gazebo) clock if true",
+            ),
+             DeclareLaunchArgument(
                 "initial_pose_x",
-                default_value="0.0",
+                default_value="48.0",
                 description="AMCL initial pose x",
             ),
             DeclareLaunchArgument(
                 "initial_pose_y",
-                default_value="0.0",
+                default_value="87.0",
                 description="AMCL initial pose y",
             ),
             DeclareLaunchArgument(
@@ -48,7 +53,7 @@ def generate_launch_description():
             ),
             DeclareLaunchArgument(
                 "initial_pose_yaw",
-                default_value="0.0",
+                default_value="-1.57",
                 description="AMCL initial pose yaw",
             ),
             localization_launch,

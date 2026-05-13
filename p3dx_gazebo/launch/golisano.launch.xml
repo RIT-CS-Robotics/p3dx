@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <group>
+    <set_remap from="/RosAria/odom" to="/odom" />
+    <set_remap from="/RosAria/cmd_vel" to="/cmd_vel" />
+    <include file="$(find-pkg-share p3dx_gazebo)/launch/p3dx_empty_world.launch.py">
+      <let name="world_file" value="golisano.sdf" />
+    </include>
+  </group>
+</launch>
